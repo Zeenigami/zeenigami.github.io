@@ -4,8 +4,8 @@ var app = angular.module('optc');
 
 app.controller('DismissalCtrl', function(ngDialog, $templateCache) {
 
-
-    var dismissalPopupShown = true;
+// change to TRUE to show Popup
+    var dismissalPopupShown = false;
 
     try { dismissalPopupShown = JSON.parse(localStorage.getItem('dismissalShown')) || false; }
     catch (e) { }
