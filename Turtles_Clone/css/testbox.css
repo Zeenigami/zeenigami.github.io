@@ -1,0 +1,219 @@
+.cont {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+/*==============================
+=            NAVBAR            =
+==============================*/
+@media (max-width: 769px) {
+  .language-picker {
+    display: none; }
+
+  #settings {
+    display: block !important; } }
+.navbar-nav {
+  margin-top: -1px !important;
+  overflow-y: hidden; }
+  .navbar-nav li a {
+    font-size: 24px;
+    font-family: 'Squada One', cursive; }
+
+.cont {
+  max-width: 900px !important;
+  margin-left: 0px; }
+
+#settings {
+  display: none; }
+
+.jumbotron {
+  background: #fff !important;
+  margin-top: -20px;
+  padding: 0 !important; }
+  .jumbotron h1, .jumbotron h2 {
+    font-family: 'Squada One', cursive; }
+  .jumbotron p {
+    font-family: Lora,sans-serif;
+    margin: 0; }
+  .jumbotron span {
+    font-size: 1.1em;
+    font-family: Lora,sans-serif; }
+  .jumbotron input[type="checkbox"] {
+    margin-left: 20px;
+    margin-right: 5px; }
+
+.id {
+  margin-top: 15px; }
+
+.cont {
+  text-align: center; }
+
+.next_week {
+  margin-top: 50px; }
+
+.see-more {
+  margin-top: 20px; }
+
+.input-id {
+  width: 50px; }
+
+.navbar-nav.nav-justified > li {
+  float: none; }
+
+.turtle-day p:first-child {
+  background-color: #eee;
+  margin-bottom: 0; }
+.turtle-day p span {
+  margin-right: 40px; }
+
+.turtle-global, .turtle-jpn {
+  margin-top: 20px; }
+
+.turtle-jpn :nth-child(odd) div p, .event-day :nth-child(odd) div p {
+  background-color: #eee; }
+.turtle-jpn :nth-child(2n) div p, .event-day :nth-child(2n) div p {
+  margin-bottom: 15px !important; }
+
+.turtle-day-jpn p, .event-day-jpn p {
+  margin-bottom: 0 !important; }
+.turtle-day-jpn p span, .event-day-jpn p span {
+  margin-right: 40px; }
+
+.game-version {
+  margin-bottom: -10px; }
+
+.ttc-version {
+  margin-top: -10px; }
+
+.event-version {
+  margin-top: 20px; }
+
+  
+/*==================================
+=            TTIME BETA            =
+==================================*/
+.ttime-day {
+  display: block; }
+  .ttime-day:first-child {
+    margin-top: 20px; }
+  .ttime-day:nth-child(odd) {
+    background-color: #eee; }
+  .ttime-day:nth-child(2n+0) {
+    margin-bottom: 10px; }
+  .ttime-day p {
+    margin-bottom: 0px !important; }
+    .ttime-day p span {
+      margin-right: 15px; }
+
+.btn-notif {
+  margin: 5px 0 5px 0 !important; }
+
+.settings-notif * {
+  text-align: left; }
+.settings-notif div:first-child {
+  margin-bottom: 5px; }
+.settings-notif div > button {
+  margin-left: 20px; }
+
+/*# sourceMappingURL=main.css.map */
