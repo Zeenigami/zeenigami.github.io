@@ -3,8 +3,8 @@ window.aliases = {
     15: [ 'GPU' ],
     16: [ 'Usopp' ],
     63: [ 'Hachi' ],
-    207: [ 'Mr. 2 Bonclay' ],
-    208: [ 'Mr. 2 Bonclay Bombardier Arabesque' ],
+    207: [ 'Mr. 2 Bonclay', 'Mr 2'],
+    208: [ 'Mr. 2 Bonclay Bombardier Arabesque', 'Mr 2' ],
     209: [ 'Nico Robin' ],
     217: [ 'Mistake', 'G3' ],
     221: [ 'Towel Nami' ],
@@ -157,9 +157,9 @@ window.aliases = {
     877: [ 'Giolla' ],
     878: [ 'Giolla, Donquixote Pirates' ],
     885: [ 'Kimono Jinbe', 'Kimono Jimbei', 'Kimono Jinbei' ],
-    886: [ 'Kimono Mr. 1' ],
+    886: [ 'Kimono Mr. 1', 'Mr 1'],
     887: [ 'Kimono Buggy' ],
     897: [ 'Kimono Crocodile' ],
     898: [ 'Kimono Mr. 3', 'Kimono Galdino' ],
-    899: [ 'Kimono Mr. 2', 'Kimono Bonclay', 'Kimono Bon Clay' ]
+    899: [ 'Kimono Mr. 2', 'Kimono Bonclay', 'Kimono Bon Clay', 'Mr 2' ]
 };
