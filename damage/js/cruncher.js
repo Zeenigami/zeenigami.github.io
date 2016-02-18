@@ -414,7 +414,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (enabledEffects[i].hasOwnProperty('rcv'))
                 rcv *= enabledEffects[i].rcv(params);
         }
-window.alert("RCV: " + enabledEffects[i].rcv(params));
+window.alert("RCV: " + rcv);
         // maximum non-static rcv
         var maximum = rcv;
         for (var k=0;k<enabledSpecials.length;++k) {
