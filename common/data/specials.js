@@ -879,9 +879,6 @@ window.specials = {
 		}
 	},
 	881: {
-		atk: function(p) {
-			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
-		},
 		rcv: function(p) { return 0.1; },
 		type: "class"
 	},
