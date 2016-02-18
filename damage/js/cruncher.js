@@ -116,6 +116,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             rcv += getShipBonus('rcv',true,x.unit,n);
             rcv *= getShipBonus('rcv',false,x.unit,n);
             rcv *= getEffectBonus('rcv',x.unit);
+			window.alert("variable RCV: ", x.unit);
+			window.alert("captainEffects: ", applyCaptainEffectsAndSpecialsToRCV(n,rcv));
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
         });
         result.rcv = Math.max(0,rcvTotal);
