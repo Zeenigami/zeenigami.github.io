@@ -404,6 +404,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyCaptainEffectsAndSpecialsToRCV = function(slotNumber,rcv) {
         var params = getParameters(slotNumber);
+		var temp;
         // static rcv
         for (var j=0;j<enabledSpecials.length;++j) {
             if (enabledSpecials[j].hasOwnProperty('rcvStatic'))
@@ -412,8 +413,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // non-static rcv
         for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('rcv'))
-                rcv *= enabledEffects[i].rcv(params);
-			window.alert("params: " + enabledEffects[i].rcv(params) + "/n rcv: " + rcv);
+				temp = enabledEffects[i].rcv(params);
+                rcv *= temp;
+			window.alert("params: " + temp + "/n rcv: " + rcv);
         }
         // maximum non-static rcv
         var maximum = rcv;
