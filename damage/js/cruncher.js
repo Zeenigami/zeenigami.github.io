@@ -419,7 +419,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         for (var k=0;k<enabledSpecials.length;++k) {
             if (enabledSpecials[k].hasOwnProperty('rcv'))
                 maximum = Math.max(maximum,rcv * enabledSpecials[k].rcv(params));
-				window.alert("RCV: " + rcv(params));
+				window.alert("maximum: " + maximum + "/nrcv: " + rcv);
         }
         return maximum;
     };
