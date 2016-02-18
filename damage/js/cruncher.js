@@ -116,8 +116,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             rcv += getShipBonus('rcv',true,x.unit,n);
             rcv *= getShipBonus('rcv',false,x.unit,n);
             rcv *= getEffectBonus('rcv',x.unit);
-			window.alert("variable RCV: " + getEffectBonus('rcv',x.unit));
-			window.alert("captainEffects: " + applyCaptainEffectsAndSpecialsToRCV(n,rcv));
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
         });
         result.rcv = Math.max(0,rcvTotal);
@@ -416,6 +414,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (enabledEffects[i].hasOwnProperty('rcv'))
                 rcv *= enabledEffects[i].rcv(params);
         }
+window.alert("RCV: " + enabledEffects[i].rcv(params));
         // maximum non-static rcv
         var maximum = rcv;
         for (var k=0;k<enabledSpecials.length;++k) {
