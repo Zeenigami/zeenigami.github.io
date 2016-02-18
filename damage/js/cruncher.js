@@ -413,13 +413,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('rcv'))
                 rcv *= enabledEffects[i].rcv(params);
+			window.alert("params: " + enabledEffects[i].rcv(params) + "/n rcv: " + rcv);
         }
         // maximum non-static rcv
         var maximum = rcv;
         for (var k=0;k<enabledSpecials.length;++k) {
             if (enabledSpecials[k].hasOwnProperty('rcv'))
                 maximum = Math.max(maximum,rcv * enabledSpecials[k].rcv(params));
-				window.alert("maximum: " + maximum + "/nrcv: " + rcv);
+				
         }
         return maximum;
     };
