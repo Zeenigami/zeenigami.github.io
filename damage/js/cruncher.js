@@ -416,10 +416,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         // maximum non-static rcv
         var maximum = rcv;
+/*
         for (var k=0;k<enabledSpecials.length;++k) {
             if (enabledSpecials[k].hasOwnProperty('rcv'))
                 maximum = Math.max(maximum,rcv * enabledSpecials[k].rcv(params));
         }
+*/
         return maximum;
     };
 
