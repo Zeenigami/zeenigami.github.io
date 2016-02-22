@@ -46,12 +46,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
             //RCV
 			awesome(context, { text: 'f0f5', x: baseX + 8, y: baseY + 25, align: 'center' });
             type(context, { text: rcv + ' RCV', x: baseX + 25, y: baseY + 25 });
-			//Heal per Turn
-			awesome(context, { text: 'f0fa', x: baseX + 8, y: baseY + 50, align: 'center' });
-            type(context, { text: healPerTurn + ' Heal per turn', x: baseX + 25, y: baseY + 50 });
             //Cost
 			awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 75, align: 'center' });
             type(context, { text: cost + ' cost', x: baseX + 25, y: baseY + 75 });
+			//Heal per Turn
+			if(healPerTurn){
+			awesome(context, { text: 'f0fa', x: baseX + 8, y: baseY + 50, align: 'center' });
+            type(context, { text: healPerTurn + ' Heal per turn', x: baseX + 25, y: baseY + 50 });
+			}
         }
     },true);
 
@@ -122,6 +124,8 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
 
     baseX = 10; baseY = 85;
 
+	if($scope.numbers.healPerTurn) baseY +=25;
+	
     if ($scope.data.effect) {
         awesome(context, { text: 'f02d', x: baseX + 8, y: baseY + 20, align: 'center', color: 'darkorchid' });
         type(context, { text: $scope.data.effect, x: baseX + 25, y: baseY + 20, maxWidth: 155, truncate: true, color: 'darkorchid' });
