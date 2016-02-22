@@ -18,7 +18,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
     
     context.fillStyle = 'white';
 		context.fillRect(0, 0, canvas.width, canvas.height);
-
+	alert("Height: " + canvas.height);
     // damage numbers
     $scope.$watch('numbers',function(numbers) {
         [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ].forEach(function(which, n) {
