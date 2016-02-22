@@ -39,12 +39,19 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
             var percHP = $filter('number')(Math.round($scope.data.percHP * 100) / 100);
             var rcv = $filter('number')($scope.numbers.rcv);
             var cost = $filter('number')($scope.numbers.cost.cost);
+			var healPerTurn = $filter('number')($scope.numbers.healPerTurn);
+			//HP
             awesome(context, { text: 'f21e', x: baseX + 8, y: baseY, align: 'center' });
             type(context, { text: currentHP + ' HP (' + percHP + '%)', x: baseX + 25, y: baseY });
-            awesome(context, { text: 'f0f5', x: baseX + 8, y: baseY + 25, align: 'center' });
+            //RCV
+			awesome(context, { text: 'f0f5', x: baseX + 8, y: baseY + 25, align: 'center' });
             type(context, { text: rcv + ' RCV', x: baseX + 25, y: baseY + 25 });
-            awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 50, align: 'center' });
-            type(context, { text: cost + ' cost', x: baseX + 25, y: baseY + 50 });
+			//Heal per Turn
+			awesome(context, { text: 'f0fa', x: baseX + 8, y: baseY + 50, align: 'center' });
+            type(context, { text: healPerTurn + ' Heal per turn', x: baseX + 25, y: baseY + 50 });
+            //Cost
+			awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 75, align: 'center' });
+            type(context, { text: cost + ' cost', x: baseX + 25, y: baseY + 75 });
         }
     },true);
 
