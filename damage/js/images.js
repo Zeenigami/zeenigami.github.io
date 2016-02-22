@@ -47,12 +47,12 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
 			awesome(context, { text: 'f0f5', x: baseX + 8, y: baseY + 25, align: 'center' });
             type(context, { text: rcv + ' RCV', x: baseX + 25, y: baseY + 25 });
             //Cost
-			awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 75, align: 'center' });
-            type(context, { text: cost + ' cost', x: baseX + 25, y: baseY + 75 });
+			awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 50, align: 'center' });
+            type(context, { text: cost + ' cost', x: baseX + 25, y: baseY + 50 });
 			//Heal per Turn
 			if(healPerTurn){
-			awesome(context, { text: 'f0fa', x: baseX + 8, y: baseY + 50, align: 'center' });
-            type(context, { text: healPerTurn + ' Heal per turn', x: baseX + 25, y: baseY + 50 });
+			awesome(context, { text: 'f0fa', x: baseX + 8, y: baseY + 75, align: 'center' });
+            type(context, { text: healPerTurn + ' Heal per turn', x: baseX + 25, y: baseY + 75 });
 			}
         }
     },true);
