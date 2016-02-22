@@ -18,9 +18,10 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
     
     context.fillStyle = 'white';
 	if($scope.tdata.team[6].special){
-		canvas.height+=25;
+		context.fillRect(0, 0, canvas.width, canvas.height+25);
+	}else{
+		context.fillRect(0, 0, canvas.width, canvas.height);
 	}
-    context.fillRect(0, 0, canvas.width, canvas.height);
 
     // damage numbers
     $scope.$watch('numbers',function(numbers) {
