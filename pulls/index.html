@@ -55,6 +55,31 @@
         </a>
 		</div>
 		
+		<script>
+		function singlePull() {
+		var rarityRandom;
+		var rarityType;
+		var unitNumber;
+		
+		rarityRandom = Math.floor(Math.random()*100);
+		if(rarityRandom ==0){
+			rarityType = "6*";
+		}else if (rarityRandom > 0 && rarityRandom < 30){
+			rarityType = "5*"
+		}else if (rarityRandom >= 30 && rarityRandom < 70){
+			rarityType = "4*"
+		}else{
+			rarityType = "3*"
+		}
+		
+		unitNumber = Math.floor(Math.random()*740);
+		
+			document.getElementById("randomPull").innerHTML = "pull result: " + rarityType + " Unit Number: " + unitNumber;
+			
+		}
+		</script>
+
+		
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
