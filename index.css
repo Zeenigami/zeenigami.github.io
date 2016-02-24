@@ -79,11 +79,14 @@ body {
 .green  { background-color: #7FCA9F; }
 .blue   { background-color: #85C1F5; }
 .red    { background-color: #E96D63; }
-.purple { background-color: #DA70D6; }
+.pink   { background-color: #DA70D6; }
 .yellow { background-color: #F4BA70; }
+.purple { background-color: ##9966ff; }
+
 
 .green:hover  { background-color: #6EB98E; }
 .blue:hover   { background-color: #74B0E4; }
 .red:hover    { background-color: #D85C52; }
-.purple:hover { background-color: #C96995; }
+.pink:hover   { background-color: #d049cb; }
 .yellow:hover { background-color: #E3A969; }
+.purple:hover { background-color: #9933ff; }
