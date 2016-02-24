@@ -4271,14 +4271,14 @@ window.details = {
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.5x}",
 		specialName: "Repel: Weapons Reflect",
 		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to one enemy",
-		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 4 orbs - 45x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
+		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	924: {
 		captain: "Boosts ATK of Ambition characters by 2x or by 2.75x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.75x}",
 		specialName: "Repel: Weapons Reflect",
 		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to one enemy",
-		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 4 orbs - 45x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
+		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	925: {
 		captain: "Boosts ATK of Tough characters by 2x",
@@ -4294,5 +4294,24 @@ window.details = {
 		captain: "Boosts ATK and HP of Ambition Units by 1.5x",
 		specialName: "Unwavering Hammer of Justice",
 		special: "Take 1.5x Additional damage; Boosts ATK of Slasher and Ambition characters by 1.2x for 3 turns"
+	},
+	928: {
+		captain: "Boosts ATK of Ambition Characters by 1.75x while above 30% HP and boosts ATK of Striker Characters by 1.75x while below 30% HP",
+		special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
+		specialName: "Hell Wisdom Rush"
+	},
+	929: {
+		captain: "Boosts ATK of Ambition Characters by 2.25x while above 30% HP and boosts ATK of Striker Characters by 2.25x while below 30% HP",
+		special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
+		specialName: "Hell Wisdom Rush"
+	},
+	930: {
+		captain: "Boosts chain multiplier by 2x",
+		specialName: "Blugori Manipulation Song",
+		special: "Changes orbs in left column to [DEX], then [QCK], then [INT]. Locks himself for 3 turns."
+	},
+	931: {
+		specialName: "Large Axe of Punishment",
+		special: "Deals 13x ATK to 1 enemy in [DEX] Damage. Turns [BLOCK] orbs into [RCV] orbs"
 	}
 };

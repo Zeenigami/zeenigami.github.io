@@ -879,6 +879,9 @@ window.specials = {
 		}
 	},
 	881: {
+		atk: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
+		},
 		rcv: function(p) { return 0.1; },
 		type: "class"
 	},
@@ -1051,5 +1054,15 @@ window.specials = {
 			return p.unit.class.has("Slasher") || p.unit.class.has("Ambition") ? 1.2 : 1;
 		},
 		type: "class"
+    },
+	928: {
+        atk: function(p) { return 1.3; },
+		type: "condition",
+		warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+    },
+    929: {
+        atk: function(p) { return 1.3; },
+		type: "condition",
+		warning: "Selected special (%name%) assumes that the enemy has been poisoned."
     }
 };
