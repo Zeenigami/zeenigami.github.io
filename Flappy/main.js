@@ -35,9 +35,13 @@ var mainState = {
         var spaceKey = game.input.keyboard.addKey(
                         Phaser.Keyboard.SPACEBAR);
         spaceKey.onDown.add(this.jump, this);
+        game.input.onDown.add(this.jump, this);
+        
         //sounds for jump
         this.jumpSound = game.add.audio('jump');
+        this.jumpSound.volume = .4;
         this.deathSound = game.add.audio('death');
+        this.deathSound.volume = .4;
         
         // Create an empty group
         this.pipes = game.add.group(); 
