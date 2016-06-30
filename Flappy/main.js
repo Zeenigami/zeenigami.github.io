@@ -1,4 +1,5 @@
 // Create our 'main' state that will contain the game
+var showDebug = false;
 var mainState = {
     preload: function() { 
         // This function will be executed at the beginning     
@@ -7,6 +8,7 @@ var mainState = {
         game.load.image('pipe', 'assets/ghost1.png');
         game.load.audio('jump', 'assets/jump.wav'); 
         game.load.audio('death', 'assets/death.wav'); 
+        this.scale.pageAlignHorizontally = true;
     },
 
     create: function() { 
@@ -24,6 +26,7 @@ var mainState = {
         // Add physics to the bird
         // Needed for: movements, gravity, collisions, etc.
         game.physics.arcade.enable(this.bird);
+        this.bird.body.setSize(50, 40, 0, 20)
 
         // Add gravity to the bird to make it fall
         this.bird.body.gravity.y = 1000;  
@@ -48,6 +51,7 @@ var mainState = {
         this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
         
         this.score = 0;
+        this.ignoreTwo = 2;
         this.labelScore = game.add.text(20, 20, "0", { font: "30px Arial", fill: "#ffffff" });   
         
     },
@@ -65,6 +69,7 @@ var mainState = {
         //bird tilt
         if (this.bird.angle < 20)
         this.bird.angle += 1; 
+        
     },
     
     // Make the bird jump 
@@ -92,7 +97,8 @@ var mainState = {
     restartGame: function() {
         // Start the 'main' state, which restarts the game
         game.state.start('main');
-        this.deathSound.play(); 
+        if (this.bird.alive)
+            this.deathSound.play(); 
     },
     
     addOnePipe: function(x, y) {
@@ -111,6 +117,8 @@ var mainState = {
         // Automatically kill the pipe when it's no longer visible 
         pipe.checkWorldBounds = true;
         pipe.outOfBoundsKill = true;
+        
+        //pipe.events.onOutOfBounds.add(jump);
     },
     
     addRowOfPipes: function() {
@@ -119,14 +127,17 @@ var mainState = {
         var hole = Math.floor(Math.random() * 5) + 1;
         
         //increase score when pipe row spawns
-        this.score += 1;
-        this.labelScore.text = this.score;  
+        this.ignoreTwo --;
+        if(this.ignoreTwo<=0){
+            this.score += 1;
+            this.labelScore.text = this.score;
+        }
 
         // Add the 6 pipes 
         // With one big hole at position 'hole' and 'hole + 1'
         for (var i = 0; i < 8; i++)
             if (i != hole && i != hole + 1) 
-                this.addOnePipe(600, i * 60 + 10);   
+                this.addOnePipe(580, i * 60 + 10);   
     },
     
     hitPipe: function() {
@@ -137,6 +148,8 @@ var mainState = {
 
         // Set the alive property of the bird to false
         this.bird.alive = false;
+        this.bird.body.velocity.y = 0;
+        
         this.deathSound.play();
 
         // Prevent new pipes from appearing
@@ -146,13 +159,27 @@ var mainState = {
         this.pipes.forEach(function(p){
             p.body.velocity.x = 0;
         }, this);
-    }, 
+    },
     
+    toggle: function() {
+    showDebug = (showDebug) ? false : true;
+    if (!showDebug)
+        game.debug.reset();
+    },
+    
+    render: function() {
+    if (showDebug)
+    {
+        game.debug.bodyInfo(this.bird, 32, 32);
+        game.debug.body(this.bird);
+    }
+    },
 };
 
 
 // Initialize Phaser, and create a 400px by 490px game
-var game = new Phaser.Game(600, 500);
+var game = new Phaser.Game(600, 500, Phaser.AUTO, 'Flappy-Chopper');
+
 
 // Add the 'mainState' and call it 'main'
 game.state.add('main', mainState); 
